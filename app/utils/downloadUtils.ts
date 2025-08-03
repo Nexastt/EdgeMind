@@ -1,22 +1,16 @@
 export const downloadAPK = async (filename: string) => {
   try {
-    console.log('Starting direct download...');
+    console.log('Starting download...');
 
-    // Direct download from Vercel deployment (APK in public folder)
-    const downloadUrl = `/EdgeMind.apk`;
+    // Vercel has limitations with large files in public folder
+    // Using Google Drive as a reliable alternative
+    const downloadUrl =
+        `https://drive.google.com/uc?export=download&id=1bl5NOEgWdnShLn3sFeS7AwuJEyhxMJha`;
 
-    // Create a temporary link element for direct download
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = filename;
-    link.target = '_blank';
+    // Open download in new tab
+    window.open(downloadUrl, '_blank');
 
-    // Add to DOM, click, and remove
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    console.log('Direct download initiated successfully!');
+    console.log('Download initiated successfully!');
     return true;
   } catch (error) {
     console.error('Download failed:', error);

@@ -24,7 +24,10 @@ export default function DownloadButton({
     try {
       await downloadAPK(EDGEMIND_FILENAME)
       
-      console.log('Direct download completed!')
+      // Show helpful message for Google Drive warning
+      setTimeout(() => {
+        alert('Download opened! If you see a Google Drive warning, click "Download anyway" to get the APK file.')
+      }, 500)
       
     } catch (error) {
       console.error('Download failed:', error)
