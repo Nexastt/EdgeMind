@@ -979,22 +979,22 @@ export default function Home() {
             >
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-purple-500/30">
                 <img
-                  src="/logo.png"
-                  alt="Developer 1"
+                  src="/dev1.png"
+                  alt="Naresh Kumar Lahajal;"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Alex Chen</h3>
-              <p className="text-gray-300 mb-3">Lead AI Engineer</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Naresh Kumar Lahajal</h3>
+              <p className="text-gray-300 mb-3">AI Engineer & Developer</p>
               <div className="space-y-2">
                 <a 
-                  href="mailto:alex.chen@edgemind.ai" 
+                  href="mailto:nareshlahajal@gmail.com" 
                   className="block text-purple-300 hover:text-purple-200 transition-colors text-sm"
                 >
-                  📧 alex.chen@edgemind.ai
+                  📧 nareshlahajal@gmail.com
                 </a>
                 <a 
-                  href="https://linkedin.com/in/alexchen" 
+                  href="https://www.linkedin.com/in/naresh-kumar-lahajal-a50383252" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-blue-300 hover:text-blue-200 transition-colors text-sm"
@@ -1002,7 +1002,7 @@ export default function Home() {
                   🔗 LinkedIn Profile
                 </a>
                 <a 
-                  href="https://github.com/alexchen" 
+                  href="https://github.com/nareshis21/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-gray-300 hover:text-white transition-colors text-sm"
@@ -1022,22 +1022,22 @@ export default function Home() {
             >
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-blue-500/30">
                 <img
-                  src="/logo.png"
-                  alt="Developer 2"
+                  src="/dev2.png"
+                  alt="Ujwal KV"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Sarah Kim</h3>
-              <p className="text-gray-300 mb-3">Mobile App Developer</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Ujwal KV</h3>
+              <p className="text-gray-300 mb-3">AI Engineer & Developer</p>
               <div className="space-y-2">
                 <a 
-                  href="mailto:sarah.kim@edgemind.ai" 
+                  href="mailto:ujwalkv@gmail.com" 
                   className="block text-purple-300 hover:text-purple-200 transition-colors text-sm"
                 >
-                  📧 sarah.kim@edgemind.ai
+                  📧 ujwalkv@gmail.com
                 </a>
                 <a 
-                  href="https://linkedin.com/in/sarahkim" 
+                  href="https://www.linkedin.com/in/ujwal-k-v-6a5230222" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-blue-300 hover:text-blue-200 transition-colors text-sm"
@@ -1045,7 +1045,7 @@ export default function Home() {
                   🔗 LinkedIn Profile
                 </a>
                 <a 
-                  href="https://github.com/sarahkim" 
+                  href="https://github.com/ujju0906" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-gray-300 hover:text-white transition-colors text-sm"
@@ -1065,22 +1065,22 @@ export default function Home() {
             >
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-green-500/30">
                 <img
-                  src="/logo.png"
-                  alt="Developer 3"
+                  src="/dev3.png"
+                  alt="Giridhar Reddy"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
-              <p className="text-gray-300 mb-3">Privacy & Security Expert</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Giridhar Reddy</h3>
+              <p className="text-gray-300 mb-3">AI Engineer & Developer</p>
               <div className="space-y-2">
                 <a 
-                  href="mailto:marcus.rodriguez@edgemind.ai" 
+                  href="mailto:giridharreddy574@gmail.com" 
                   className="block text-purple-300 hover:text-purple-200 transition-colors text-sm"
                 >
-                  📧 marcus.rodriguez@edgemind.ai
+                  📧 giridharreddy574@gmail.com
                 </a>
                 <a 
-                  href="https://linkedin.com/in/marcusrodriguez" 
+                  href="https://www.linkedin.com/in/d-giridhar-reddy-4a9ab3230" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-blue-300 hover:text-blue-200 transition-colors text-sm"
@@ -1088,7 +1088,7 @@ export default function Home() {
                   🔗 LinkedIn Profile
                 </a>
                 <a 
-                  href="https://github.com/marcusrodriguez" 
+                  href="https://github.com/GD-reddy77" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-gray-300 hover:text-white transition-colors text-sm"
