@@ -234,10 +234,173 @@ export default function Home() {
                              <motion.button
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
+                 onClick={() => {
+                   document.getElementById('learn-more')?.scrollIntoView({ behavior: 'smooth' });
+                 }}
                  className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/15 transition-colors bg-black/10"
                >
                 Learn More
               </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Learn More Section */}
+      <section id="learn-more" className="py-20 px-4 bg-gradient-to-b from-black/20 to-purple-900/10">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Learn More About EdgeMind
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how EdgeMind revolutionizes mobile AI with local processing, privacy-first design, and intelligent navigation
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* What is EdgeMind */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">What is EdgeMind?</h3>
+              <p className="text-gray-300 text-sm">
+                EdgeMind is a revolutionary local AI assistant that runs completely on your device. 
+                No internet required after setup, ensuring 100% privacy and offline functionality.
+              </p>
+            </motion.div>
+
+            {/* Key Features */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Key Features</h3>
+              <ul className="text-gray-300 text-sm space-y-2">
+                <li>• Local AI RAG capabilities</li>
+                <li>• Smart Navigation without LLM</li>
+                <li>• Multiple AI model support</li>
+                <li>• SMS & Call Log RAG</li>
+                <li>• Voice commands (Lumos/Nox)</li>
+              </ul>
+            </motion.div>
+
+            {/* Privacy & Security */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Privacy & Security</h3>
+              <p className="text-gray-300 text-sm">
+                Your data never leaves your device. All AI processing happens locally, 
+                ensuring complete privacy and no data collection or surveillance.
+              </p>
+            </motion.div>
+
+            {/* How It Works */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">How It Works</h3>
+              <p className="text-gray-300 text-sm">
+                Download the APK, install locally, and download your preferred AI model. 
+                Once set up, everything works offline with local processing power.
+              </p>
+            </motion.div>
+
+            {/* Use Cases */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Use Cases</h3>
+              <ul className="text-gray-300 text-sm space-y-2">
+                <li>• Personal AI assistance</li>
+                <li>• Document analysis & RAG</li>
+                <li>• Smart device navigation</li>
+                <li>• Voice-controlled actions</li>
+                <li>• Offline AI processing</li>
+              </ul>
+            </motion.div>
+
+            {/* Technical Specs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Technical Specs</h3>
+              <ul className="text-gray-300 text-sm space-y-2">
+                <li>• Android 8.0+ compatible</li>
+                <li>• Local AI model support</li>
+                <li>• Offline-first architecture</li>
+                <li>• Privacy-focused design</li>
+                <li>• Custom command system</li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              EdgeMind represents the future of mobile AI - powerful, private, and completely under your control. 
+              Experience AI assistance without compromising your privacy or internet dependency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                              <button
+                  onClick={() => {
+                    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                >
+                  Explore Features
+                </button>
+                <button
+                  onClick={() => {
+                    document.getElementById('installation')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                >
+                  Installation Guide
+                </button>
+                <button
+                  onClick={() => {
+                    document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                >
+                  Watch Demos
+                </button>
             </div>
           </motion.div>
         </div>
@@ -615,12 +778,25 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-8">
               Download and experience the future of mobile AI
             </p>
-            <div className="flex justify-center">
-              <DownloadButton />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+                         <div className="flex justify-center space-x-4">
+               <DownloadButton />
+               <motion.button
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.6, delay: 0.4 }}
+                 viewport={{ once: true }}
+                 className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                 onClick={() => {
+                   // Scroll to features section for more info
+                   document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                 }}
+               >
+                 📚 Learn More About EdgeMind
+               </motion.button>
+             </div>
+           </motion.div>
+         </div>
+       </section>
 
       {/* Installation Guide Section */}
       <section id="installation" className="py-20 px-4 bg-black/20">
@@ -949,6 +1125,8 @@ export default function Home() {
           `
         }}
       />
+
+
 
       {/* Developer Information Section */}
       <section className="py-16 px-4 bg-black/20">
