@@ -294,7 +294,7 @@ export default function Home() {
                 <li>• Smart Navigation without LLM</li>
                 <li>• Multiple AI model support</li>
                 <li>• SMS & Call Log RAG</li>
-                <li>• Voice commands (Lumos/Nox)</li>
+                <li>• Custom commands (Lumos/Nox)</li>
               </ul>
             </motion.div>
 
