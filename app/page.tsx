@@ -148,27 +148,16 @@ export default function Home() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="aspect-[9/16] bg-gray-700 rounded-xl overflow-hidden">
-                <video 
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src="/EdgeMind - Made with Clipchamp (1).mp4" type="video/mp4" />
-                  <p className="text-white text-center p-6 text-base">
-                    Video not available. 
-                    <a 
-                      href="https://drive.google.com/file/d/1kXr_gbPq0mCcmVry8rwRIjd0a8suHGtX/view?usp=sharing" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-300 hover:text-purple-200 ml-2 underline"
-                    >
-                      Watch on Google Drive
-                    </a>
-                  </p>
-                </video>
+                                  <iframe
+                    id="overview-video"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/C7oaMbbp1fg?autoplay=1&mute=1&loop=1&playlist=C7oaMbbp1fg&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&vq=hd1080"
+                    title="EdgeMind Overview Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-white">Your Local AI Assistant</h3>
@@ -298,27 +287,16 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white mb-4 text-center">Smart Navigation</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 <div className="aspect-[9/16] bg-gray-700 rounded-lg overflow-hidden">
-                  <video 
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src="/Smart Navigate - Made with Clipchamp.mp4" type="video/mp4" />
-                    <p className="text-white text-center p-4 text-sm">
-                      Video not available. 
-                      <a 
-                        href="https://drive.google.com/file/d/1kXr_gbPq0mCcmVry8rwRIjd0a8suHGtX/view?usp=sharing" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
-                      >
-                        Watch on Google Drive
-                      </a>
-                    </p>
-                  </video>
+                  <iframe
+                    id="smart-navigate-video"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/vmu1ORrPvvM?autoplay=1&mute=1&loop=1&playlist=vmu1ORrPvvM&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&vq=hd1080"
+                    title="Smart Navigation Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
                 </div>
                 <div className="space-y-3">
                   <p className="text-gray-300 text-sm leading-relaxed">
@@ -353,27 +331,16 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white mb-4 text-center">SMS & Call Logs RAG</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 <div className="aspect-[9/16] bg-gray-700 rounded-lg overflow-hidden">
-                  <video 
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src="/SMSRAG - Made with Clipchamp.mp4" type="video/mp4" />
-                    <p className="text-white text-center p-4 text-sm">
-                      Video not available. 
-                      <a 
-                        href="https://drive.google.com/file/d/1DQxcLLnsgnSpjd4ArPYwyiIBKheZ9hej/view?usp=sharing" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
-                      >
-                        Watch on Google Drive
-                      </a>
-                    </p>
-                  </video>
+                  <iframe
+                    id="sms-rag-video"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/Fen87jTWaFg?autoplay=1&mute=1&loop=1&playlist=Fen87jTWaFg&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&vq=hd1080"
+                    title="SMS & Call Logs RAG Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
                 </div>
                 <div className="space-y-3">
                   <p className="text-gray-300 text-sm leading-relaxed">
@@ -412,27 +379,16 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-white mb-3 text-center">Document RAG</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 <div className="aspect-[9/16] bg-gray-700 rounded-lg overflow-hidden">
-                  <video 
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src="/RAG - Made with Clipchamp.mp4" type="video/mp4" />
-                    <p className="text-white text-center p-4 text-sm">
-                      Video not available. 
-                      <a 
-                        href="https://drive.google.com/file/d/163C81TrGpUD5PFKxM3SpXfLo22oYREPl/view?usp=sharing" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
-                      >
-                        Watch on Google Drive
-                      </a>
-                    </p>
-                  </video>
+                  <iframe
+                    id="document-rag-video"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/QrzvSd8a_lc?autoplay=1&mute=1&loop=1&playlist=QrzvSd8a_lc&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&vq=hd1080"
+                    title="Document RAG Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
                 </div>
                 <div className="space-y-3">
                   <p className="text-gray-300 text-sm leading-relaxed">
@@ -468,27 +424,16 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-white mb-3 text-center">Voice Commands</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden">
-                  <video 
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src="/LUMOS - Made with Clipchamp.mp4" type="video/mp4" />
-                    <p className="text-white text-center p-4 text-sm">
-                      Video not available. 
-                      <a 
-                        href="https://drive.google.com/file/d/1xHjG8Worez_EePFKxM3SpXfLo22oYREPl/view?usp=sharing" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
-                      >
-                        Watch on Google Drive
-                      </a>
-                    </p>
-                  </video>
+                  <iframe
+                    id="voice-commands-video"
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/KKlsiU2M7-I?autoplay=1&mute=1&loop=1&playlist=KKlsiU2M7-I&controls=1&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&vq=hd1080"
+                    title="Custom Command Lumos Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
                 </div>
                 <div className="space-y-3">
                   <p className="text-gray-300 text-sm leading-relaxed">
@@ -905,6 +850,70 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Video Visibility Control Script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              const videoIds = [
+                'overview-video',
+                'smart-navigate-video', 
+                'sms-rag-video',
+                'document-rag-video',
+                'voice-commands-video'
+              ];
+              
+              let players = {};
+              let observers = {};
+              
+              // Load YouTube API
+              const tag = document.createElement('script');
+              tag.src = 'https://www.youtube.com/iframe_api';
+              const firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+              
+              // Initialize YouTube players when API is ready
+              window.onYouTubeIframeAPIReady = function() {
+                videoIds.forEach((videoId, index) => {
+                  const videoElement = document.getElementById(videoId);
+                  if (videoElement) {
+                    players[videoId] = new YT.Player(videoId, {
+                      events: {
+                        'onReady': (event) => onPlayerReady(event, videoId),
+                      }
+                    });
+                  }
+                });
+              };
+              
+              function onPlayerReady(event, videoId) {
+                const videoElement = document.getElementById(videoId);
+                if (videoElement) {
+                  // Create intersection observer to watch video visibility
+                  observers[videoId] = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                        // Video is visible, play it
+                        event.target.playVideo();
+                      } else {
+                        // Video is not visible, pause it
+                        event.target.pauseVideo();
+                      }
+                    });
+                  }, {
+                    threshold: 0.5, // Trigger when 50% of video is visible
+                    rootMargin: '0px'
+                  });
+                  
+                  // Start observing the video element
+                  observers[videoId].observe(videoElement);
+                }
+              }
+            });
+          `
+        }}
+      />
 
       {/* Footer */}
              <footer className="py-12 px-4 border-t border-white/10">
