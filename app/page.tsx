@@ -791,7 +791,7 @@ export default function Home() {
                    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
                  }}
                >
-                 📚 Learn More About EdgeMind
+                 Learn More About EdgeMind
                </motion.button>
              </div>
            </motion.div>
