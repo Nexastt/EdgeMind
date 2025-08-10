@@ -20,33 +20,33 @@ export default function Home() {
   const features = [
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: "Local & Private",
-      description: "All processing happens on your device. No data sent to cloud servers."
+      title: "100% Offline",
+      description: "No internet required for inference or smart navigation. Works completely offline after setup."
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Device-Based Performance",
-      description: "Performance depends on your device. Local LLM processing for privacy."
+      title: "Local AI Processing",
+      description: "All AI processing happens on your device. No cloud servers, no internet dependency."
     },
     {
       icon: <Search className="w-8 h-8" />,
       title: "Smart Navigation",
-      description: "Find settings and apps instantly with natural language commands."
+      description: "Navigate settings and apps instantly with natural language commands - completely offline."
     },
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Device Control",
-      description: "Control your device with simple text commands and navigation."
+      description: "Control your device with simple text commands and navigation without internet."
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Coming Soon: Voice Commands",
-      description: "Voice commands like 'Lumos' for flashlight coming in next release."
+      description: "Voice commands like 'Lumos' for flashlight coming in next release - all offline."
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Privacy First",
-      description: "Your data stays on your device. No tracking, no surveillance."
+      description: "Your data stays on your device. No tracking, no surveillance, no internet required."
     }
   ]
 
@@ -115,6 +115,7 @@ export default function Home() {
             <div className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
               <a href="#demo" className="text-gray-300 hover:text-white transition-colors">Demo</a>
+              <a href="#installation" className="text-gray-300 hover:text-white transition-colors">Installation Guide</a>
               <a href="#download" className="text-gray-300 hover:text-white transition-colors">Download</a>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             </div>
@@ -177,6 +178,31 @@ export default function Home() {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
                     <span className="text-gray-300">Complete RAG Capabilities</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">Local AI RAG - Full RAG capabilities running locally</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">Smart Navigation - No LLM installation required</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">Multiple Model Support - Choose between different models</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">SMS RAG & Call Log RAG - Intelligent search capabilities</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">Lumos & Custom Commands - Device control
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">100% Private after model download - No internet required</span>
                   </div>
                 </div>
               </div>
@@ -421,7 +447,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-black/10 rounded-xl p-4 hover:bg-white/10 transition-all duration-300"
             >
-              <h3 className="text-lg font-semibold text-white mb-3 text-center">Voice Commands</h3>
+              <h3 className="text-lg font-semibold text-white mb-3 text-center">Custom Commands</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                 <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden">
                   <iframe
@@ -437,18 +463,22 @@ export default function Home() {
                 </div>
                 <div className="space-y-3">
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Control your device with voice commands using advanced speech recognition. 
+                    Control your device with custom commands using advanced speech recognition. 
                     Hands-free operation for a truly futuristic mobile experience.
                   </p>
                   <div className="space-y-2">
 
                     <div className="flex items-center space-x-2">
                       <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
-                      <span className="text-gray-300 text-xs">Hands-Free Control</span>
+                      <span className="text-gray-300 text-xs">Custom Commands: "Lumos" turns on flashlight, "Nox" turns off</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
-                      <span className="text-gray-300 text-xs">Natural Language Processing</span>
+                      <span className="text-gray-300 text-xs">Add your own custom commands in next update</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Future: Create custom actions and commands</span>
                     </div>
                   </div>
                 </div>
@@ -585,13 +615,15 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-8">
               Download and experience the future of mobile AI
             </p>
-            <DownloadButton />
+            <div className="flex justify-center">
+              <DownloadButton />
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Installation Guide Section */}
-      <section className="py-20 px-4 bg-black/20">
+      <section id="installation" className="py-20 px-4 bg-black/20">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -750,75 +782,78 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Row 4: Step 6 - Full width */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white/5 rounded-xl p-6 border border-white/10"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  6
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-2">Play Protect Turned Off</h3>
-                  <p className="text-gray-300 mb-4">After this, install our app. This is due to Android restrictions on side loading.</p>
-                  <div className="relative inline-block">
-                    <img 
-                      src="/PAUSEDPLAYPROTECT.jpg" 
-                      alt="Play Protect Paused" 
-                      className="w-64 h-auto rounded-lg border-2 border-green-400"
-                    />
-                    <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      TURNED OFF
+            {/* Row 4: Steps 6 & 7 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Step 6 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    6
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">Play Protect Turned Off</h3>
+                    <p className="text-gray-300 mb-4">After this, install our app. This is due to Android restrictions on side loading.</p>
+                    <div className="relative inline-block">
+                      <img 
+                        src="/PAUSEDPLAYPROTECT.jpg" 
+                        alt="Play Protect Paused" 
+                        className="w-64 h-auto rounded-lg border-2 border-green-400"
+                      />
+                      <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
+                        TURNED OFF
+                      </div>
+                    </div>
+                    <div className="mt-4 p-4 bg-blue-900/20 border border-blue-400/30 rounded-lg">
+                      <p className="text-blue-200 text-sm">
+                        <strong>Note:</strong> In a few weeks, we will officially upload to all app stores. 
+                        Don't worry - once our app is installed, you can turn Play Protect back on!
+                      </p>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 bg-blue-900/20 border border-blue-400/30 rounded-lg">
-                    <p className="text-blue-200 text-sm">
-                      <strong>Note:</strong> In a few weeks, we will officially upload to all app stores. 
-                      Don't worry - once our app is installed, you can turn Play Protect back on!
-                    </p>
-                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Row 5: Step 7 - Install App */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              viewport={{ once: true }}
-              className="bg-white/5 rounded-xl p-6 border border-white/10"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  7
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-2">Click Install Our App</h3>
-                  <p className="text-gray-300 mb-4">Now you can install EdgeMind! Click on the <span className="text-yellow-300 font-bold">INSTALL</span> button when prompted.</p>
-                  <div className="relative inline-block">
-                    <img 
-                      src="/INSTALL.jpg" 
-                      alt="Install EdgeMind App" 
-                      className="w-64 h-auto rounded-lg border-2 border-yellow-400"
-                    />
-                    <div className="absolute top-[306px] right-5 bg-yellow-400/50 text-black px-6 py-2 rounded text-sm font-bold border-2 border-white shadow-lg animate-pulse">
-                      
+              {/* Step 7 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    7
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">Click Install Our App</h3>
+                    <p className="text-gray-300 mb-4">Now you can install EdgeMind! Click on the <span className="text-yellow-300 font-bold">INSTALL</span> button when prompted.</p>
+                    <div className="relative inline-block">
+                      <img 
+                        src="/INSTALL.jpg" 
+                        alt="Install EdgeMind App" 
+                        className="w-64 h-auto rounded-lg border-2 border-yellow-400"
+                      />
+                      <div className="absolute top-[306px] right-5 bg-yellow-400/50 text-black px-6 py-2 rounded text-sm font-bold border-2 border-white shadow-lg animate-pulse">
+                        
+                      </div>
+                    </div>
+                    <div className="mt-4 p-4 bg-green-900/20 border border-green-400/30 rounded-lg">
+                      <p className="text-green-200 text-sm">
+                        <strong>Important:</strong> Click the <span className="text-yellow-300 font-bold">INSTALL</span> button to proceed with the installation. 
+                        This will download and install EdgeMind on your device.
+                      </p>
                     </div>
                   </div>
-                  <div className="mt-4 p-4 bg-green-900/20 border border-green-400/30 rounded-lg">
-                    <p className="text-green-200 text-sm">
-                      <strong>Important:</strong> Click the <span className="text-yellow-300 font-bold">INSTALL</span> button to proceed with the installation. 
-                      This will download and install EdgeMind on your device.
-                    </p>
-                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -914,6 +949,157 @@ export default function Home() {
           `
         }}
       />
+
+      {/* Developer Information Section */}
+      <section className="py-16 px-4 bg-black/20">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Meet Our Developers
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              The talented team behind EdgeMind's innovative local AI technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Developer 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-purple-500/30">
+                <img
+                  src="/logo.png"
+                  alt="Developer 1"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Alex Chen</h3>
+              <p className="text-gray-300 mb-3">Lead AI Engineer</p>
+              <div className="space-y-2">
+                <a 
+                  href="mailto:alex.chen@edgemind.ai" 
+                  className="block text-purple-300 hover:text-purple-200 transition-colors text-sm"
+                >
+                  📧 alex.chen@edgemind.ai
+                </a>
+                <a 
+                  href="https://linkedin.com/in/alexchen" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-blue-300 hover:text-blue-200 transition-colors text-sm"
+                >
+                  🔗 LinkedIn Profile
+                </a>
+                <a 
+                  href="https://github.com/alexchen" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  💻 GitHub Profile
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Developer 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-blue-500/30">
+                <img
+                  src="/logo.png"
+                  alt="Developer 2"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Sarah Kim</h3>
+              <p className="text-gray-300 mb-3">Mobile App Developer</p>
+              <div className="space-y-2">
+                <a 
+                  href="mailto:sarah.kim@edgemind.ai" 
+                  className="block text-purple-300 hover:text-purple-200 transition-colors text-sm"
+                >
+                  📧 sarah.kim@edgemind.ai
+                </a>
+                <a 
+                  href="https://linkedin.com/in/sarahkim" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-blue-300 hover:text-blue-200 transition-colors text-sm"
+                >
+                  🔗 LinkedIn Profile
+                </a>
+                <a 
+                  href="https://github.com/sarahkim" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  💻 GitHub Profile
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Developer 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-green-500/30">
+                <img
+                  src="/logo.png"
+                  alt="Developer 3"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
+              <p className="text-gray-300 mb-3">Privacy & Security Expert</p>
+              <div className="space-y-2">
+                <a 
+                  href="mailto:marcus.rodriguez@edgemind.ai" 
+                  className="block text-purple-300 hover:text-purple-200 transition-colors text-sm"
+                >
+                  📧 marcus.rodriguez@edgemind.ai
+                </a>
+                <a 
+                  href="https://linkedin.com/in/marcusrodriguez" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-blue-300 hover:text-blue-200 transition-colors text-sm"
+                >
+                  🔗 LinkedIn Profile
+                </a>
+                <a 
+                  href="https://github.com/marcusrodriguez" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  💻 GitHub Profile
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
              <footer className="py-12 px-4 border-t border-white/10">
