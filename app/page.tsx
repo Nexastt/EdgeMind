@@ -341,7 +341,7 @@ export default function Home() {
                 <li>• Personal AI assistance</li>
                 <li>• Document analysis & RAG</li>
                 <li>• Smart device navigation</li>
-                <li>• Voice-controlled actions</li>
+                <li>• Voice-controlled actions (comming soon)</li>
                 <li>• Offline AI processing</li>
               </ul>
             </motion.div>
