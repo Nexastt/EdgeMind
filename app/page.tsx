@@ -50,13 +50,45 @@ export default function Home() {
     }
   ]
 
+  const advancedFeatures = [
+    {
+      icon: <Search className="w-8 h-8" />,
+      title: "Intelligent Actions & Navigation",
+      description: "Navigate through Android features and perform actions by providing natural language commands."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Complete On-Device RAG",
+      description: "Upload personal documents and ask questions with complete privacy - everything stays on your device."
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "Call & SMS Logs Access",
+      description: "Query your call logs and SMS logs through natural language commands on high-end devices."
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: "Multi-Model Support",
+      description: "Download and switch between multiple state-of-the-art local LLMs on mobile seamlessly."
+    }
+  ]
+
   const useCases = [
     "Open any app with text commands",
     "Navigate settings without scrolling",
     "Control device features (flashlight, volume, etc.)",
     "Search your device intelligently",
-    "Replace Google Assistant completely",
+    "Do assistant work locally - a privacy-focused alternative",
     "Work offline with full functionality"
+  ]
+
+  const ragFeatures = [
+    "Upload personal documents (PDFs, images, text)",
+    "Ask questions about your documents with natural language",
+    "Query SMS and call logs on high-end devices",
+    "Access personal data without privacy concerns",
+    "Download multiple state-of-the-art local LLMs",
+    "Switch between models for different performance needs"
   ]
 
   return (
@@ -66,25 +98,103 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
                          <div className="flex items-center space-x-2">
-               <div className="w-8 h-8 rounded-lg overflow-hidden bg-white">
+               <div className="w-12 h-12 rounded-lg overflow-hidden bg-white">
                  <Image 
                    src="/Gemini_Generated_Image_g146vkg146vkg146 (1).png" 
                    alt="EdgeMind Logo" 
-                   width={32}
-                   height={32}
-                   className="w-full h-full object-cover"
+                   width={48}
+                   height={48}
+                   className="w-full h-full object-contain"
+                   quality={100}
+                   priority
+                   unoptimized
                  />
                </div>
                <span className="text-xl font-bold text-white">EdgeMind</span>
              </div>
             <div className="hidden md:flex space-x-8">
               <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
+              <a href="#demo" className="text-gray-300 hover:text-white transition-colors">Demo</a>
               <a href="#download" className="text-gray-300 hover:text-white transition-colors">Download</a>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             </div>
           </div>
         </div>
       </nav>
+
+      {/* EdgeMind Overview Section */}
+      <section className="py-20 px-4 bg-black/20">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              EdgeMind Overview
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Your Local AI Assistant - Experience the full power of EdgeMind
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="aspect-[9/16] bg-gray-700 rounded-xl overflow-hidden">
+                <video 
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="/EdgeMind - Made with Clipchamp (1).mp4" type="video/mp4" />
+                  <p className="text-white text-center p-6 text-base">
+                    Video not available. 
+                    <a 
+                      href="https://drive.google.com/file/d/1kXr_gbPq0mCcmVry8rwRIjd0a8suHGtX/view?usp=sharing" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-purple-300 hover:text-purple-200 ml-2 underline"
+                    >
+                      Watch on Google Drive
+                    </a>
+                  </p>
+                </video>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-white">Your Local AI Assistant</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Experience the full power of EdgeMind - your local, private mobile RAG assistant that runs completely on your device. 
+                  No cloud servers, no data collection, just pure AI power in your pocket.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">100% Private & Local</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">On-Device LLM Processing</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                    <span className="text-gray-300">Complete RAG Capabilities</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
@@ -155,8 +265,331 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Demo Section */}
+      <section id="demo" className="py-20 px-4 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              See EdgeMind in Action
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Watch our comprehensive demo videos showcasing EdgeMind's capabilities
+            </p>
+          </motion.div>
+
+
+
+          {/* Feature Demos Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Row 1: Video 1 with description and Video 2 with explanation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-black/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">Smart Navigation</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div className="aspect-[9/16] bg-gray-700 rounded-lg overflow-hidden">
+                  <video 
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/Smart Navigate - Made with Clipchamp.mp4" type="video/mp4" />
+                    <p className="text-white text-center p-4 text-sm">
+                      Video not available. 
+                      <a 
+                        href="https://drive.google.com/file/d/1kXr_gbPq0mCcmVry8rwRIjd0a8suHGtX/view?usp=sharing" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
+                      >
+                        Watch on Google Drive
+                      </a>
+                    </p>
+                  </video>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Navigate through Android settings and apps instantly with natural language commands. 
+                    No more scrolling through endless menus - just tell EdgeMind what you want to do.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Natural Language Commands</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Instant App Navigation</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Settings Quick Access</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-black/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">SMS & Call Logs RAG</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div className="aspect-[9/16] bg-gray-700 rounded-lg overflow-hidden">
+                  <video 
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/SMSRAG - Made with Clipchamp.mp4" type="video/mp4" />
+                    <p className="text-white text-center p-4 text-sm">
+                      Video not available. 
+                      <a 
+                        href="https://drive.google.com/file/d/1DQxcLLnsgnSpjd4ArPYwyiIBKheZ9hej/view?usp=sharing" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
+                      >
+                        Watch on Google Drive
+                      </a>
+                    </p>
+                  </video>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Query your SMS messages and call logs using natural language. 
+                    Find specific conversations, check call history, and get insights from your personal data with complete privacy.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Natural Language Queries</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">SMS & Call History Search</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Complete Privacy Protection</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Row 2: Videos 3 & 4 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            {/* Document RAG - VIDEO 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-black/10 rounded-xl p-4 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-lg font-semibold text-white mb-3 text-center">Document RAG</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div className="aspect-[9/16] bg-gray-700 rounded-lg overflow-hidden">
+                  <video 
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/RAG - Made with Clipchamp.mp4" type="video/mp4" />
+                    <p className="text-white text-center p-4 text-sm">
+                      Video not available. 
+                      <a 
+                        href="https://drive.google.com/file/d/163C81TrGpUD5PFKxM3SpXfLo22oYREPl/view?usp=sharing" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
+                      >
+                        Watch on Google Drive
+                      </a>
+                    </p>
+                  </video>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Upload and query documents with advanced RAG capabilities. 
+                    Get instant answers from your PDFs, text files, and other documents with complete privacy.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Document Upload & Processing</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Advanced RAG Queries</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Multi-Format Support</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Voice Commands - VIDEO 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-black/10 rounded-xl p-4 hover:bg-white/10 transition-all duration-300"
+            >
+              <h3 className="text-lg font-semibold text-white mb-3 text-center">Voice Commands</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden">
+                  <video 
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src="/LUMOS - Made with Clipchamp.mp4" type="video/mp4" />
+                    <p className="text-white text-center p-4 text-sm">
+                      Video not available. 
+                      <a 
+                        href="https://drive.google.com/file/d/1xHjG8Worez_EePFKxM3SpXfLo22oYREPl/view?usp=sharing" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-300 hover:text-purple-200 ml-1 block mt-2"
+                      >
+                        Watch on Google Drive
+                      </a>
+                    </p>
+                  </video>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Control your device with voice commands using advanced speech recognition. 
+                    Hands-free operation for a truly futuristic mobile experience.
+                  </p>
+                  <div className="space-y-2">
+
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Hands-Free Control</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-purple-200 rounded-full"></div>
+                      <span className="text-gray-300 text-xs">Natural Language Processing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Advanced Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience the full power of on-device AI with complete privacy
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {advancedFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="feature-card rounded-xl p-6 hover:bg-white/10 transition-all duration-300 bg-black/10"
+              >
+                <div className="text-purple-200 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* RAG Features Section */}
+      <section className="py-20 px-4 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              RAG Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Powerful document processing and personal data querying with complete privacy
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {ragFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-3 text-white"
+              >
+                <div className="w-2 h-2 bg-purple-200 rounded-full"></div>
+                <span className="text-lg">{feature}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases Section */}
-             <section className="py-20 px-4 bg-black/20">
+             <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,18 +632,249 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Try EdgeMind?
+              Get EdgeMind Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Download the APK and experience the future of mobile assistance
+              Download and experience the future of mobile AI
             </p>
-                                      <DownloadButton variant="primary" size="lg" className="mx-auto px-12 py-6 text-xl" />
-                         <p className="text-sm text-gray-400 mt-4">
-               Compatible with Android 10+ • Performance varies by device • 100% Private
-             </p>
+            <DownloadButton />
           </motion.div>
+        </div>
+      </section>
+
+      {/* Installation Guide Section */}
+      <section className="py-20 px-4 bg-black/20">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Installation Guide
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Follow these steps to install EdgeMind on your Android device
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {/* Row 1: Step 1 - Small rectangle */}
+            <div className="flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-4 border border-white/10 max-w-md"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    1
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">Open Play Store</h3>
+                    <p className="text-gray-300 text-sm">Launch the Google Play Store app on your Android device</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Row 2: Steps 2 & 3 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Step 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    2
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">Click on Profile Icon</h3>
+                    <p className="text-gray-300 mb-4">Tap the profile icon in the top right corner of the Play Store</p>
+                    <div className="relative inline-block">
+                      <img 
+                        src="/PLAYSTORE.jpg" 
+                        alt="Play Store Profile Icon" 
+                        className="w-64 h-auto rounded-lg border-2 border-purple-400"
+                      />
+                      <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold border-2 border-white">
+                        CLICK HERE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 3 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    3
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">Click on Play Protect</h3>
+                    <p className="text-gray-300 mb-4">Select "Play Protect" from the menu options</p>
+                    <div className="relative inline-block">
+                      <img 
+                        src="/CLICKONPLAYPROTECT.jpg" 
+                        alt="Play Protect Menu" 
+                        className="w-64 h-auto rounded-lg"
+                      />
+                      <div className="absolute top-[288px] left-10 bg-yellow-400/50 px-8 py-3 rounded text-xs border-2 border-yellow-400 shadow-lg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Row 3: Steps 4 & 5 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Step 4 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    4
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">Click Settings Icon</h3>
+                    <p className="text-gray-300 mb-4">In the Play Protect page, tap the settings icon in the top right corner</p>
+                    <div className="relative inline-block">
+                      <img 
+                        src="/CLICKONSETTING.jpg" 
+                        alt="Play Protect Settings Icon" 
+                        className="w-64 h-auto rounded-lg border-2 border-blue-400"
+                      />
+                      <div className="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded text-xs font-bold border-2 border-white">
+                        SETTINGS
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 5 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    5
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">Turn Off Toggle & Pause</h3>
+                    <p className="text-gray-300 mb-4">In the Play Protect settings page, turn off the toggle and click on "Pause" (this is temporary)</p>
+                    <div className="relative inline-block">
+                      <img 
+                        src="/PAUSETHEPLAYPROTECT.jpg" 
+                        alt="Pause Play Protect" 
+                        className="w-64 h-auto rounded-lg border-2 border-orange-400"
+                      />
+                      <div className="absolute top-[110px] right-5 bg-orange-500/50 px-4 py-2 rounded text-xs border-2 border-orange-400 shadow-lg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Row 4: Step 6 - Full width */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  6
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white mb-2">Play Protect Turned Off</h3>
+                  <p className="text-gray-300 mb-4">After this, install our app. This is due to Android restrictions on side loading.</p>
+                  <div className="relative inline-block">
+                    <img 
+                      src="/PAUSEDPLAYPROTECT.jpg" 
+                      alt="Play Protect Paused" 
+                      className="w-64 h-auto rounded-lg border-2 border-green-400"
+                    />
+                    <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
+                      TURNED OFF
+                    </div>
+                  </div>
+                  <div className="mt-4 p-4 bg-blue-900/20 border border-blue-400/30 rounded-lg">
+                    <p className="text-blue-200 text-sm">
+                      <strong>Note:</strong> In a few weeks, we will officially upload to all app stores. 
+                      Don't worry - once our app is installed, you can turn Play Protect back on!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Row 5: Step 7 - Install App */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="bg-white/5 rounded-xl p-6 border border-white/10"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  7
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white mb-2">Click Install Our App</h3>
+                  <p className="text-gray-300 mb-4">Now you can install EdgeMind! Click on the <span className="text-yellow-300 font-bold">INSTALL</span> button when prompted.</p>
+                  <div className="relative inline-block">
+                    <img 
+                      src="/INSTALL.jpg" 
+                      alt="Install EdgeMind App" 
+                      className="w-64 h-auto rounded-lg border-2 border-yellow-400"
+                    />
+                    <div className="absolute top-[306px] right-5 bg-yellow-400/50 text-black px-6 py-2 rounded text-sm font-bold border-2 border-white shadow-lg animate-pulse">
+                      
+                    </div>
+                  </div>
+                  <div className="mt-4 p-4 bg-green-900/20 border border-green-400/30 rounded-lg">
+                    <p className="text-green-200 text-sm">
+                      <strong>Important:</strong> Click the <span className="text-yellow-300 font-bold">INSTALL</span> button to proceed with the installation. 
+                      This will download and install EdgeMind on your device.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -246,13 +910,16 @@ export default function Home() {
              <footer className="py-12 px-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
                                 <div className="flex items-center justify-center space-x-2 mb-4">
-             <div className="w-6 h-6 rounded-lg overflow-hidden bg-white">
+             <div className="w-10 h-10 rounded-lg overflow-hidden bg-white">
                <Image 
                  src="/Gemini_Generated_Image_g146vkg146vkg146 (1).png" 
                  alt="EdgeMind Logo" 
-                 width={24}
-                 height={24}
-                 className="w-full h-full object-cover"
+                 width={40}
+                 height={40}
+                 className="w-full h-full object-contain"
+                 quality={100}
+                 priority
+                 unoptimized
                />
              </div>
              <span className="text-lg font-bold text-white">EdgeMind</span>

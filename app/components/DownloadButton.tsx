@@ -23,7 +23,7 @@ export default function DownloadButton({
     
     try {
       await downloadAPK(EDGEMIND_FILENAME)
-      console.log('Direct download completed!')
+      
     } catch (error) {
       console.error('Download failed:', error)
     } finally {
